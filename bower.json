@@ -1,0 +1,7 @@
+{
+  "name": "sitename",
+  "version": "0.0.1",
+  "dependencies": {
+    "normalize-css": "normalize.css#^3.0.3"
+  }
+}

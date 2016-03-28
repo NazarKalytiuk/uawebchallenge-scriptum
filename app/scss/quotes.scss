@@ -1,0 +1,209 @@
+#quotes
+{
+    background: url(../img/quotes-bg.png) no-repeat center/cover;
+}
+.quotes
+{
+    display: flex;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    &__text
+    {
+        display: flex;
+
+        width: 50%;
+
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        & img
+        {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    &__img
+    {
+        display: flex;
+
+        min-width: 50%;
+        & img
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.quotes-tabs
+{
+    display: flex;
+
+    width: 100%;
+
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    & input
+    {
+        position: absolute;
+        left: -9999px;
+    }
+    & label
+    {
+        display: inline-flex;
+
+        width: 2rem;
+        height: 2rem;
+
+        align-items: center;
+        justify-content: center;
+        & span
+        {
+            width: .5rem;
+            height: .5rem;
+
+            background-color: #ddd;
+        }
+    }
+}
+.quotes-tabs  .tabs
+{
+    display: flex;
+
+    width: 100%;
+    margin: 5rem 0;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.quotes-tabs .tabs .tab
+{
+    font-size: 1.3125rem;
+    font-weight: bold;
+    line-height: 1.9375rem;
+
+    display: flex;
+    display: none;
+
+    width: 100%;
+
+    text-align: center;
+    letter-spacing: .1rem;
+
+    opacity: 0;
+    color: #1a2631;
+
+    justify-content: space-between;;
+}
+.quotes-tabs #qi-1:checked ~ .tabs #tab-1,
+.quotes-tabs #qi-2:checked ~ .tabs #tab-2,
+.quotes-tabs #qi-3:checked ~ .tabs #tab-3,
+.quotes-tabs #qi-4:checked ~ .tabs #tab-4,
+{
+    display: flex;
+
+    animation: quote-tab 2s ease-out;
+
+    animation-fill-mode: forwards;
+}
+.quotes-tabs #qi-1:checked ~ #ql-1 span,
+.quotes-tabs #qi-2:checked ~ #ql-2 span,
+.quotes-tabs #qi-3:checked ~ #ql-3 span,
+.quotes-tabs #qi-4:checked ~ #ql-4 span,
+{
+    background-color: $hcolor;
+}
+@keyframes quote-tab
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    .quotes__img
+    {
+        width: 20%;
+    }
+    .quotes-tabs
+    {
+        & label
+        {
+            display: inline-flex;
+
+            width: 2rem;
+            height: 2rem;
+            margin: 1rem;
+
+            align-items: center;
+            justify-content: center;
+            & span
+            {
+                width: 2rem;
+                height: 2rem;
+
+                background-color: #ddd;
+            }
+        }
+    }
+    .quotes__text
+    {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    .quotes
+    {
+        margin: 2.5rem auto;
+    }
+    .quotes__img
+    {
+        display: none;
+    }
+    .quotes-tabs
+    {
+        & label
+        {
+            display: inline-flex;
+
+            width: 2rem;
+            height: 2rem;
+            margin: 1rem;
+
+            align-items: center;
+            justify-content: center;
+            & span
+            {
+                width: 2rem;
+                height: 2rem;
+
+                background-color: #ddd;
+            }
+        }
+    }
+    .quotes__text
+    {
+        width: 90%;
+    }
+    .quotes-tabs .tabs .tab
+    {
+        font-size: 2rem;
+    }
+}

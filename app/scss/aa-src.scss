@@ -1,0 +1,109 @@
+// colors
+$bgc: #f3f3f3;
+$primarycolor: #6c6c6c;
+$hcolor: #1a2631;
+
+
+// fonts
+@font-face
+{
+    font-family: 'Baron';
+
+    src: url('../fonts/Baron Neue.otf'),
+    url('../fonts/Baron Neue Bold.woff');
+}
+@font-face
+{
+    font-family: 'Baron-Bold';
+
+    src: url('../fonts/Baron Neue Bold.otf'),
+    url('../fonts/Baron Neue Bold.woff');
+}
+
+// shadows
+
+@mixin long-text-shadow ()
+{
+    text-shadow: rgb(227, 227, 227) 1px 1px,
+    rgb(227, 227, 227) 2px 2px,
+    rgb(228, 228, 228) 3px 3px,
+    rgb(228, 228, 228) 4px 4px,
+    rgb(229, 229, 229) 5px 5px,
+    rgb(229, 229, 229) 6px 6px,
+    rgb(229, 229, 229) 7px 7px,
+    rgb(230, 230, 230) 8px 8px,
+    rgb(230, 230, 230) 9px 9px,
+    rgb(231, 231, 231) 10px 10px,
+    rgb(231, 231, 231) 11px 11px,
+    rgb(231, 231, 231) 12px 12px,
+    rgb(232, 232, 232) 13px 13px,
+    rgb(232, 232, 232) 14px 14px,
+    rgb(233, 233, 233) 15px 15px,
+    rgb(233, 233, 233) 16px 16px,
+    rgb(233, 233, 233) 17px 17px,
+    rgb(234, 234, 234) 18px 18px,
+    rgb(234, 234, 234) 19px 19px,
+    rgb(235, 235, 235) 20px 20px,
+    rgb(235, 235, 235) 21px 21px,
+    rgb(235, 235, 235) 22px 22px,
+    rgb(236, 236, 236) 23px 23px,
+    rgb(236, 236, 236) 24px 24px,
+    rgb(237, 237, 237) 25px 25px,
+    rgb(237, 237, 237) 26px 26px,
+    rgb(237, 237, 237) 27px 27px,
+    rgb(238, 238, 238) 28px 28px,
+    rgb(238, 238, 238) 29px 29px,
+    rgb(239, 239, 239) 30px 30px,
+    rgb(239, 239, 239) 31px 31px,
+    rgb(239, 239, 239) 32px 32px,
+    rgb(240, 240, 240) 33px 33px,
+    rgb(240, 240, 240) 34px 34px,
+    rgb(241, 241, 241) 35px 35px,
+    rgb(241, 241, 241) 36px 36px,
+    rgb(241, 241, 241) 37px 37px,
+    rgb(242, 242, 242) 38px 38px,
+    rgb(242, 242, 242) 39px 39px,
+    rgb(243, 243, 243) 40px 40px,
+    rgb(243, 243, 243) 41px 41px,
+    rgb(243, 243, 243) 42px 42px,
+    rgb(244, 244, 244) 43px 43px,
+    rgb(244, 244, 244) 44px 44px,
+    rgb(245, 245, 245) 45px 45px,
+    rgb(245, 245, 245) 46px 46px,
+    rgb(245, 245, 245) 47px 47px,
+    rgb(246, 246, 246) 48px 48px,
+    rgb(246, 246, 246) 49px 49px,
+    rgb(247, 247, 247) 50px 50px;
+}
+@mixin link-shadow
+{
+    text-shadow: rgb(230, 230, 230) 1px 1px,
+    rgb(230, 230, 230) 2px 2px,
+    rgb(231, 231, 231) 3px 3px,
+    rgb(231, 231, 231) 4px 4px,
+    rgb(232, 232, 232) 5px 5px,
+    rgb(232, 232, 232) 6px 6px,
+    rgb(233, 233, 233) 7px 7px,
+    rgb(233, 233, 233) 8px 8px,
+    rgb(234, 234, 234) 9px 9px,
+    rgb(234, 234, 234) 10px 10px,
+    rgb(235, 235, 235) 11px 11px;
+}
+@mixin middle-shadow
+{
+    text-shadow: rgb(226, 226, 226) 1px 1px,
+    rgb(226, 226, 226) 2px 2px,
+    rgb(226, 226, 226) 3px 3px,
+    rgb(226, 226, 226) 4px 4px,
+    rgb(226, 226, 226) 5px 5px,
+    rgb(226, 226, 226) 6px 6px,
+    rgb(226, 226, 226) 7px 7px,
+    rgb(227, 227, 227) 8px 8px,
+    rgb(229, 229, 229) 9px 9px,
+    rgb(230, 230, 230) 10px 10px,
+    rgb(232, 232, 232) 11px 11px,
+    rgb(233, 233, 233) 12px 12px,
+    rgb(235, 235, 235) 13px 13px,
+    rgb(236, 236, 236) 14px 14px,
+    rgb(238, 238, 238) 15px 15px;
+}

@@ -1,0 +1,218 @@
+.works
+{
+    display: flex;
+    overflow: hidden;
+
+    width: 68%;
+    margin: 8rem auto;
+
+    flex-wrap: wrap;
+    & h2
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+.grid
+{
+    display: flex;
+    display: none;
+
+    width: 100%;
+
+    opacity: 0;
+
+    justify-content: space-between;;
+    &__column
+    {
+        display: flex;
+
+        width: 32%;
+
+        flex-wrap: wrap;
+        align-content: flex-start;
+        flex-grow: 1;
+        &:not(:last-child)
+        {
+            margin-right: 1.5rem;
+        }
+        & .grid__item
+        {
+            position: relative;
+
+            display: flex;
+
+            cursor: pointer;
+            &:not(:last-child)
+            {
+                margin-bottom: 1.5rem;
+            }
+            & img
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+.work-categories
+{
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    & input
+    {
+        position: absolute;
+        left: -9999px;
+    }
+    & label
+    {
+        font-family: 'Baron';
+        font-size: .75rem;
+
+        display: inline-flex;
+
+        margin: 0 1rem 3.5rem 0;
+        padding: .5rem;
+        &:last-child
+        {
+            margin-right: 0;
+        }
+    }
+    & .tabs
+    {
+        display: flex;
+
+        width: 100%;
+
+        flex-wrap: wrap;
+        & .grid
+        {
+            display: flex;
+            display: none;
+
+            width: 100%;
+            &__column
+            {
+                display: flex;
+
+                width: 32%;
+            }
+        }
+    }
+}
+#i-all:checked ~ #l-all,
+#i-design:checked ~ #l-design,
+#i-web:checked ~ #l-web,
+#i-brand:checked ~ #l-brand,
+#i-art:checked ~ #l-art,
+{
+    border-bottom: 2px solid black;
+}
+#i-all:checked ~ .tabs #w-all,
+#i-design:checked ~ .tabs #w-design,
+#i-web:checked ~ .tabs #w-web,
+#i-brand:checked ~ .tabs #w-brand,
+#i-art:checked ~ .tabs #w-art,
+{
+    display: flex;
+
+    animation: tab .4s ease-out;
+
+    animation-fill-mode: forwards;
+}
+@keyframes tab
+{
+    from
+    {
+        margin-top: 2rem;
+
+        opacity: 0;
+    }
+    to
+    {
+        margin-top: 0;
+
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 960px)
+{
+    .works
+    {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 640px)
+{
+    .work-categories
+    {
+        & label
+        {
+            font-family: 'Baron';
+            font-size: 1.5rem;
+
+            display: inline-flex;
+
+            margin: 0 1rem 3.5rem 0;
+            padding: .5rem;
+            &:last-child
+            {
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .grid
+    {
+        flex-wrap: wrap;
+        &__column
+        {
+            width: 90%;
+            margin-bottom: 2rem;
+            &:last-child
+            {
+                display: none;
+            }
+        }
+        &__item
+        {
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14),
+            0 1px 10px 0 rgba(0, 0, 0, .12),
+            0 2px 4px -1px rgba(0, 0, 0, .2);
+        }
+    }
+    .work-categories
+    {
+        & label
+        {
+            font-family: 'Baron';
+            font-size: 2rem;
+
+            display: inline-flex;
+
+            margin: 0 1rem 3.5rem 0;
+            padding: .5rem;
+            &:last-child
+            {
+                margin-right: 0;
+            }
+        }
+    }
+    .tabs .grid .grid__column
+    {
+        width: 100%;
+
+        flex-grow: 1;
+    }
+    .grid__item
+    {
+        flex-grow: 1;
+    }
+}

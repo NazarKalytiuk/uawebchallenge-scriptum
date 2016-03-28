@@ -1,0 +1,79 @@
+.about-scriptum
+{
+    display: flex;
+
+    width: 68%;
+    margin: 8rem auto;
+    &__img
+    {
+        display: flex;
+
+        width: 50%;
+        & img
+        {
+            display: flex;
+
+            width: 100%;
+        }
+    }
+    &__text
+    {
+        display: flex;
+
+        width: 50%;
+        margin: 2.8rem;
+
+        flex-wrap: wrap;
+        align-content: flex-start;
+        & h2
+        {
+            width: 100%;
+        }
+        & p
+        {
+            width: 100%;
+            margin-bottom: 2.5rem;
+
+            color: $primarycolor;
+        }
+        & a
+        {
+            @include link-shadow();
+            &:hover
+            {
+                color: $hcolor;
+                text-shadow: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 960px)
+{
+    .about-scriptum
+    {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 640px)
+{
+    .about-scriptum
+    {
+        margin: 2.5rem auto;
+        &__img
+        {
+            display: none;
+        }
+        &__text
+        {
+            width: 100%;
+            & p
+            {
+                font-size: 1.5rem;
+            }
+            & a
+            {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

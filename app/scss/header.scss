@@ -1,0 +1,159 @@
+.header-wrapper
+{
+    position: relative;
+
+    display: flex;
+
+    height: 100vh;
+    & .header
+    {
+        position: relative;
+
+        display: flex;
+
+        width: 100%;
+
+        background: url(../img/header_bg.png) no-repeat center/cover;
+
+        align-items: flex-start;
+        justify-content: space-between;
+        align-content: flex-start;
+        &__logo
+        {
+            position: relative;
+
+            display: flex;
+
+            width: 4.15%;
+            margin: 1rem;
+
+            text-align: center;
+
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            & img
+            {
+                width: 100%;
+            }
+        }
+        &__menu
+        {
+            position: relative;
+
+            display: flex;
+
+            width: 4.15%;
+            margin: 1rem;
+
+            text-align: center;
+
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            & button
+            {
+                border: none;
+                background-color: transparent;
+                &:hover
+                {
+                    opacity: .7;
+                }
+                & img
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.sidebar-menu
+{
+    position: absolute;
+    z-index: 2;
+    top: -2.5rem;
+    right: -350px;
+
+    display: flex;
+
+    width: 280px;
+    height: calc(100vh + 2.5rem);
+
+    transition: .4s cubic-bezier(.4,.0,1,1);
+
+    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),
+    0 6px 30px 5px rgba(0,0,0,.12),
+    0 8px 10px -5px rgba(0,0,0,.2);
+
+    flex-wrap: wrap;
+    align-content: flex-start;
+    & div
+    {
+        font-size: 20px;
+        line-height: 60px;
+
+        width: 100%;
+        padding: 12px 26px;
+
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+
+        color: #212121;
+        text-shadow: none;
+    }
+    & hr
+    {
+        width: 100%;
+
+        background-color: $primarycolor;
+    }
+    & li
+    {
+        display: inline-flex;
+
+        width: 100%;
+
+        align-items: center;
+        & a
+        {
+            font-family: 'Baron';
+            font-size: 14px;
+            line-height: 18px;
+
+            width: 100%;
+            padding: 12px 26px;
+
+            text-align: left;
+            text-decoration: none;
+            text-transform: none;
+
+            color: #212121;
+            text-shadow: none;
+            &:hover
+            {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+}
+.header__menu:hover .sidebar-menu
+{
+    right: -2.5rem;
+
+    opacity: 1;
+}
+
+@media screen and (max-width: 960px)
+{
+    .header-wrapper .header
+    {
+        &__logo,
+        &__menu
+        {
+            width: 5rem;
+        }
+    }
+}

@@ -1,0 +1,168 @@
+.news
+{
+    display: flex;
+
+    width: 68%;
+    margin: 8rem auto;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & a
+    {
+        color: $primarycolor;
+        &:hover
+        {
+            color: $hcolor;
+        }
+    }
+    & h2
+    {
+        width: 100%;
+        margin-bottom: 5.5rem;
+
+        text-align: center;
+
+        @include middle-shadow();
+    }
+    &__item
+    {
+        display: flex;
+
+        width: 32%;
+
+        flex-wrap: wrap;
+        & .img
+        {
+            display: flex;
+
+            width: 100%;
+            margin-bottom: 1rem;
+            & img
+            {
+                width: 100%;
+            }
+        }
+        & .info
+        {
+            display: flex;
+
+            width: 100%;
+            margin-bottom: 1rem;
+            &__author,
+            &__date
+            {
+                display: flex;
+
+                flex-grow: 2;
+                & img
+                {
+                    width: 1.45rem;
+                    height: 1.45rem;
+                    margin-right: .3rem;
+                }
+            }
+            &__date
+            {
+                flex-grow: 3;
+            }
+        }
+        & .text
+        {
+            width: 100%;
+            margin-bottom: 2.5rem;
+            & h3
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 960px)
+{
+    .news
+    {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    .news
+    {
+        width: 90%;
+
+        justify-content: space-between;
+        &__item
+        {
+            width: 49%;
+            margin-bottom: 2rem;
+        }
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .news
+    {
+        width: 90%;
+
+        justify-content: space-between;
+        &__item
+        {
+            overflow: hidden;
+
+            width: 100%;
+            margin-bottom: 2rem;
+
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14),
+            0 1px 10px 0 rgba(0, 0, 0, .12),
+            0 2px 4px -1px rgba(0, 0, 0, .2);
+            & .info
+            {
+                padding: .4rem;
+                &__author
+                {
+                    & span
+                    {
+                        font-size: 1.5rem;
+                    }
+                    & img
+                    {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+                &__date
+                {
+                    & span
+                    {
+                        font-size: 1.5rem;
+                    }
+                    & img
+                    {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+            & .text
+            {
+                padding: .4rem;
+                & h3
+                {
+                    font-size: 1.7rem;
+                }
+                & p
+                {
+                    font-size: 1.5rem;
+                }
+            }
+            & a
+            {
+                font-size: 3rem;
+
+                margin-bottom: 1rem;
+                padding: .4rem;
+            }
+        }
+    }
+}

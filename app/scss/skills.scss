@@ -1,0 +1,86 @@
+.skills
+{
+    display: flex;
+
+    width: 68%;
+    margin: 8rem auto;
+
+    flex-wrap: wrap;
+    & h2
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+.progress-bar
+{
+    font-family: 'Baron';
+
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 3rem;
+
+    flex-flow: row wrap;
+    &__title
+    {
+        font-family: 'Baron';
+        font-size: .875rem;
+
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    &__progress
+    {
+        width: 100%;
+        height: 2rem;
+
+        background-color: $bgc;
+        & .fill
+        {
+            display: flex;
+
+            height: 100%;
+
+            background-color: $hcolor;
+
+            justify-content: flex-end;
+            align-items: center;
+            & .persent
+            {
+                font-family: 'Baron';
+                font-size: .875rem;
+                line-height: 100%;
+
+                margin-right: .5rem;
+
+                color: $bgc;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px)
+{
+    .skills
+    {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .progress-bar__title
+    {
+        font-size: 2rem;
+    }
+    .progress-bar__progress
+    {
+        height: 3.5rem;
+        & .fill .persent
+        {
+            font-size: 2rem;
+        }
+    }
+}

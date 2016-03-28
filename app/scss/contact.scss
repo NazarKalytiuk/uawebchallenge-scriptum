@@ -1,0 +1,118 @@
+.contact
+{
+    display: flex;
+
+    width: 52%;
+    margin: 8rem auto;
+
+    flex-wrap: wrap;
+    & h2
+    {
+        width: 100%;
+
+        text-align: center;
+
+        @include middle-shadow();
+    }
+}
+.form
+{
+    display: flex;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+    & button
+    {
+        font-family: 'Baron';
+        font-size: .8125rem;
+
+        margin: 2rem;
+
+        transition: .3s;
+        text-decoration: none;
+        text-transform: lowercase;
+
+        color: $primarycolor;
+        border: none;
+        background-color: transparent;
+
+        @include link-shadow();
+        &:hover
+        {
+            color: $hcolor;
+            text-shadow: none;
+        }
+    }
+}
+.form
+{
+    &__input
+    {
+        font-family: 'Baron-Bold';
+        font-size: .875rem;
+        line-height: 1.4375rem;
+
+        width: 100%;
+        margin-bottom: 1.7rem;
+        padding: 1.35rem;
+
+        letter-spacing: .1rem;
+
+        color: silver;
+        border: none;
+        background: #efefef;
+        &:focus
+        {
+            outline: none;
+        }
+    }
+    &__input#name,
+    &__input#surname
+    {
+        width: 48.6%;
+    }
+    &__input#name
+    {
+        margin-right: 2.8%;
+    }
+}
+textarea.form__input
+{
+    min-height: 20rem;
+    margin-bottom: 0;
+}
+input[placeholder],
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+/* Firefox 19+ */
+input:-moz-placeholder,
+/* Firefox 18- */
+input:-ms-input-placeholder
+{
+    font-family: 'Baron-Bold';
+
+    text-overflow: ellipsis;
+
+    color: #c0c0c0;
+}
+
+@media screen and (max-width: 960px)
+{
+    .contact
+    {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    .form__input
+    {
+        font-size: 1.5rem;
+    }
+    button.form__submit
+    {
+        font-size: 2rem;
+    }
+}
